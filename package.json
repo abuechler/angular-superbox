@@ -1,0 +1,17 @@
+{
+  "name": "angular-superbox",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abuechler/angular-superbox"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0",
+    "matchdep": "0.1.2",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-clean": "^0.6.0"
+  }
+}

@@ -1,0 +1,129 @@
+/**
+ *
+ * Copyright 2012 Stefan Petre
+ * Copyright 2014 Andreas Büchler
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+body {
+    background-color: #a19994;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 25px auto;
+}
+
+.superbox-list {
+    display: inline-block;
+    zoom: 1;
+    width: 12.5%;
+    margin: 0px;
+    padding: 0px;
+    position: relative
+}
+
+.superbox-img {
+    max-width: 100%;
+    width: 100%;
+    cursor: pointer
+}
+
+.superbox-show {
+    text-align: left;
+    position: relative;
+    background-color: #222;
+    width: inherit;
+    float: left;
+    padding: 25px 0 12px 25px;
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.superbox-current-img {
+    max-width: 100%;
+    float: left;
+    padding-right: 25px;
+    padding-bottom: 13px
+}
+
+.superbox-img:hover {
+    opacity: .6
+}
+
+.superbox-float {
+    float: left
+}
+
+.superbox-close {
+    opacity: 0.7;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: url(../../demo/img/close.gif) no-repeat center center;
+    width: 35px;
+    height: 35px;
+}
+
+.superbox-close:hover {
+    opacity: 1
+}
+
+.superbox-imageinfo {
+    display: inline-block;
+    max-width: 500px;
+    color: #fff;
+    padding: 0 25px 0 0
+}
+
+.superbox-imageinfo span {
+    font-size: 13px;
+    color: #a19994;
+    margin-right: -2px;
+    padding-top: 10px;
+    display: inline-block;
+    padding-bottom: 13px
+}
+
+.superbox-imageinfo > :first-child {
+    margin-bottom: 10px;
+    font-weight: 700
+}
+
+.superbox-imageinfo span p:last-child {
+    margin-top: 30px
+}
+
+@media only screen and (min-width: 320px) {
+    .superbox-list {
+        width: 50%
+    }
+}
+
+@media only screen and (min-width: 486px) {
+    .superbox-list {
+        width: 25%
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .superbox-list {
+        width: 16.6%
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .superbox-list {
+        width: 12.5%
+    }
+}
+
+@media only screen and (min-width: 1824px) {
+    .superbox-list {
+        width: 12.5%
+    }
+}

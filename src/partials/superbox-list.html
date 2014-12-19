@@ -1,0 +1,22 @@
+<div class="superbox-list" ng-click="click()">
+    <img ng-src="{{entry.img_thumb}}"
+         data-img="{{entry.img_full}}"
+         alt="{{entry.alt}}" title="{{entry.title}}" class="superbox-img">
+</div>
+<div class="superbox-show" style="display: block" ng-show="isSelected(entry)">
+    <div id="imgInfoBox" class="superbox-imageinfo">
+        <h1>{{entry.title}}</h1>
+        <span>
+            <p class="superbox-img-description">{{entry.description}}</p>
+            <br/>
+            <br/>
+
+           <button type="button" class="btn btn-primary btn-sm" style="padding: 5px; margin: 5px;" ng-repeat="actionObj in actions" ng-click="actionObj.action(entry)">
+               {{actionObj.label}}
+           </button>
+        </span>
+    </div>
+    <img ng-src="{{entry.img_full}}" class="superbox-current-img">
+
+    <div class="superbox-close" ng-click="close()"></div>
+</div>
