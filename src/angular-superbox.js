@@ -30,6 +30,7 @@
           }
           return scope._currentEntry;
         };
+
       }
     };
 
