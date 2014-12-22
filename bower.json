@@ -1,6 +1,10 @@
 {
   "name": "angular-superbox",
-  "main": "dist/angular-superbox",
+  "main": [
+    "dist/angular-superbox.js",
+    "dist/angular-superbox.css"
+
+  ],
   "version": "0.0.1",
   "homepage": "https://github.com/abuechler/angular-superbox",
   "author": {

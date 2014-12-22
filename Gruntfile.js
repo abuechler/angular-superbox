@@ -1,78 +1,107 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-    'use strict';
+  'use strict';
 
-    // Project configuration.
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
 
 
-        lib_files: {
+    lib_files: {
 
-            core: [
-                'src/<%= pkg.name %>.js'
-            ],
-            css:  [
-                'src/style/<%= pkg.name %>.css'
-            ]
+      core: [
+        'src/<%= pkg.name %>.js'
+      ],
+      css: [
+        'src/style/<%= pkg.name %>.css'
+      ]
+    },
+
+    concat: {
+      dist: {
+        src: ['src/<%= lib_files.core %>', 'gen/angular-superbox.tpl.js'],
+        dest: 'dist/angular-superbox.js'
+      }
+    },
+
+    copy: {
+      css: {
+        src: ['src/style/<%= lib_files.css %>'],
+        dest: 'dist/angular-superbox.css'
+      }
+    },
+
+    ngtemplates: {
+      app: {
+        options: {
+          module: 'superbox',
+          prefix: 'templates/superbox'
         },
+        cwd: 'src/partials',
+        src: ['superbox.html', 'superbox-list.html'],
+        dest: 'gen/angular-superbox.tpl.js'
+      }
+    },
 
-        copy: {
-          dist: {
-              expand: true,
-              cwd: 'src',
-              src: ['**'],
-              dest: 'dist/<%= pkg.name %>/'
+    clean: ['dist', 'gen'],
 
-          }
-
-        },
-
-        clean: ["dist"],
-
-        watch: {
-
-            scripts: {
-                files: ['gruntfile.js', '<%= lib_files.core %>', '<%= lib_files.test %>'],
-                tasks: ['jshint:all', 'karma:unit']
-            },
-
-            livereload: {
-                options: {
-                    livereload: true
-                },
-                files: ['src/**/*.*'],
-                tasks: ['jshint', 'karma:unit']
-            }
-        },
-
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc'
-            },
-
-            all: ['Gruntfile.js', '<%= lib_files.core %>']
-        },
-
-
-        uglify: {
-            options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-            },
-            build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'dist/angular-superbox/<%= pkg.name %>.min.js'
-            }
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          base: ['./'],
+          open: 'http://localhost:9001/demo'
         }
-    });
+      }
+    },
 
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    watch: {
+      scripts: {
+        files: ['gruntfile.js', '<%= lib_files.core %>'],
+        tasks: ['jshint:all']
+      },
 
-    // Default task(s).
-    grunt.registerTask('default', ['jshint:all']);
+      livereload: {
+        options: {
+          livereload: true
+        },
+        files: ['src/**/*.*'],
+        tasks: ['jshint']
+      }
+    },
 
-    grunt.registerTask('build', function() {
-        grunt.task.run(['clean', 'default', 'copy',  'uglify', 'copy']);
-    });
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc'
+      },
+
+      all: ['Gruntfile.js', '<%= lib_files.core %>']
+    },
+
+
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> - <%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      dist: {
+        files: {
+          'dist/angular-superbox.min.js': 'dist/angular-superbox.js'
+        }
+      }
+    }
+  });
+
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
+  // Default task(s).
+  grunt.registerTask('default', ['jshint:all']);
+
+  grunt.registerTask('dist', function () {
+    grunt.task.run(['clean', 'default', 'copy:css', 'ngtemplates', 'concat:dist', 'uglify:dist']);
+  });
+
+  grunt.registerTask('serve', 'start the demo', [
+    'default',
+    'connect:server',
+    'watch:livereload']);
 
 };

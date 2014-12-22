@@ -2,15 +2,11 @@
     'use strict';
 
     var module = angular.module('superbox', []);
-    var scripts = document.getElementsByTagName("script");
-    var currentScriptPath = scripts[scripts.length-1].src;
 
     module.directive('superbox', [function () {
 
-        var templatePath = currentScriptPath.substring(0, currentScriptPath.lastIndexOf('/') + 1) + 'partials/superbox.html';
-
         return {
-            templateUrl: templatePath,
+            templateUrl: 'templates/superbox/superbox.html',
             restrict: 'E',
             scope: {
                 superboxModel: '=',
@@ -28,10 +24,8 @@
 
     module.directive('superboxList', [function () {
 
-        var templatePath = currentScriptPath.substring(0, currentScriptPath.lastIndexOf('/') + 1) + 'partials/superbox-list.html';
-
         return {
-            templateUrl: templatePath,
+            templateUrl: 'templates/superbox/superbox-list.html',
             restrict: 'E',
             scope: {
                 entry: '=',
