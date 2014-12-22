@@ -1,0 +1,22 @@
+{
+  "name": "angular-superbox",
+  "main": "dist/angular-superbox",
+  "version": "0.0.1",
+  "homepage": "https://github.com/abuechler/angular-superbox",
+  "author": {
+    "name": "https://github.com/abuechler/angular-superbox/graphs/contributors"
+  },
+  "description": "AngularJS version of Superbox",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">=1",
+    "jquery": "~2.1.3"
+  }
+}
