@@ -1,9 +1,9 @@
-<div class="superbox-list" ng-click="click()">
+<div class="superbox-list" ng-click="currentEntry(entry)">
     <img ng-src="{{entry.img_thumb}}"
          data-img="{{entry.img_full}}"
          alt="{{entry.alt}}" title="{{entry.title}}" class="superbox-img">
 </div>
-<div class="superbox-show" style="display: block" ng-show="isSelected(entry)">
+<div id="superbox-show-{{entry.id }}" class="superbox-show" style="display: block" ng-show="isSelected(entry)">
     <div id="imgInfoBox" class="superbox-imageinfo">
         <h1>{{entry.title}}</h1>
         <span>

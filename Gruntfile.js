@@ -18,14 +18,14 @@ module.exports = function (grunt) {
 
     concat: {
       dist: {
-        src: ['src/<%= lib_files.core %>', 'gen/angular-superbox.tpl.js'],
+        src: ['<%= lib_files.core %>', 'gen/angular-superbox.tpl.js'],
         dest: 'dist/angular-superbox.js'
       }
     },
 
     copy: {
       css: {
-        src: ['src/style/<%= lib_files.css %>'],
+        src: ['<%= lib_files.css %>'],
         dest: 'dist/angular-superbox.css'
       }
     },
@@ -56,8 +56,8 @@ module.exports = function (grunt) {
 
     watch: {
       scripts: {
-        files: ['gruntfile.js', '<%= lib_files.core %>'],
-        tasks: ['jshint:all']
+        files: ['Gruntfile.js', '<%= lib_files.core %>'],
+        tasks: ['jshint:all', 'dist']
       },
 
       livereload: {
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
           livereload: true
         },
         files: ['src/**/*.*'],
-        tasks: ['jshint']
+        tasks: ['jshint', 'copy:css', 'ngtemplates', 'concat:dist']
       }
     },
 
