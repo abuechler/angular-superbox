@@ -68,7 +68,7 @@ angular.module('superbox').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('templates/superbox/superbox.html',
-    "<div class=\"superbox\" ng-model-options=\"{ getterSetter: true }\">\n" +
+    "<div class=\"as-superbox\" ng-model-options=\"{ getterSetter: true }\">\n" +
     "    <superbox-list entry=\"entry\"  actions=\"superboxActions\" current-entry=\"currentEntry\" ng-repeat=\"entry in superboxModel\"></superbox-list>\n" +
     "    <div class=\"superbox-float\"></div>\n" +
     "</div>"
@@ -76,16 +76,16 @@ angular.module('superbox').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('templates/superbox/superbox-list.html',
-    "<div class=\"superbox-list\" ng-click=\"currentEntry(entry)\">\n" +
+    "<div class=\"as-superbox-list\" ng-click=\"currentEntry(entry)\">\n" +
     "    <img ng-src=\"{{entry.img_thumb}}\"\n" +
     "         data-img=\"{{entry.img_full}}\"\n" +
-    "         alt=\"{{entry.alt}}\" title=\"{{entry.title}}\" class=\"superbox-img\">\n" +
+    "         alt=\"{{entry.alt}}\" title=\"{{entry.title}}\" class=\"as-superbox-img\">\n" +
     "</div>\n" +
-    "<div id=\"superbox-show-{{entry.id }}\" class=\"superbox-show\" style=\"display: block\" ng-show=\"isSelected(entry)\">\n" +
-    "    <div id=\"imgInfoBox\" class=\"superbox-imageinfo\">\n" +
+    "<div id=\"superbox-show-{{entry.id }}\" class=\"as-superbox-show\" style=\"display: block\" ng-show=\"isSelected(entry)\">\n" +
+    "    <div id=\"imgInfoBox\" class=\"as-superbox-imageinfo\">\n" +
     "        <h1>{{entry.title}}</h1>\n" +
     "        <span>\n" +
-    "            <p class=\"superbox-img-description\">{{entry.description}}</p>\n" +
+    "            <p class=\"as-superbox-img-description\">{{entry.description}}</p>\n" +
     "            <br/>\n" +
     "            <br/>\n" +
     "\n" +
@@ -94,9 +94,9 @@ angular.module('superbox').run(['$templateCache', function($templateCache) {
     "           </button>\n" +
     "        </span>\n" +
     "    </div>\n" +
-    "    <img ng-src=\"{{entry.img_full}}\" class=\"superbox-current-img\">\n" +
+    "    <img ng-src=\"{{entry.img_full}}\" class=\"as-superbox-current-img\">\n" +
     "\n" +
-    "    <div class=\"superbox-close\" ng-click=\"close()\"></div>\n" +
+    "    <span class=\"glyphicon glyphicon-remove as-superbox-close\" aria-hidden=\"true\" ng-click=\"close()\"></span>\n" +
     "</div>"
   );
 

@@ -3,7 +3,6 @@
   "main": [
     "dist/angular-superbox.js",
     "dist/angular-superbox.css"
-
   ],
   "version": "0.0.2",
   "homepage": "https://github.com/abuechler/angular-superbox",
@@ -21,6 +20,7 @@
   ],
   "dependencies": {
     "angular": ">=1",
-    "jquery": ">=2"
+    "jquery": ">=2",
+    "bootstrap": ">=3"
   }
 }

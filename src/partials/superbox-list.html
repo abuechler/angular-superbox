@@ -1,13 +1,13 @@
-<div class="superbox-list" ng-click="currentEntry(entry)">
+<div class="as-superbox-list" ng-click="currentEntry(entry)">
     <img ng-src="{{entry.img_thumb}}"
          data-img="{{entry.img_full}}"
-         alt="{{entry.alt}}" title="{{entry.title}}" class="superbox-img">
+         alt="{{entry.alt}}" title="{{entry.title}}" class="as-superbox-img">
 </div>
-<div id="superbox-show-{{entry.id }}" class="superbox-show" style="display: block" ng-show="isSelected(entry)">
-    <div id="imgInfoBox" class="superbox-imageinfo">
+<div id="superbox-show-{{entry.id }}" class="as-superbox-show" style="display: block" ng-show="isSelected(entry)">
+    <div id="imgInfoBox" class="as-superbox-imageinfo">
         <h1>{{entry.title}}</h1>
         <span>
-            <p class="superbox-img-description">{{entry.description}}</p>
+            <p class="as-superbox-img-description">{{entry.description}}</p>
             <br/>
             <br/>
 
@@ -16,7 +16,7 @@
            </button>
         </span>
     </div>
-    <img ng-src="{{entry.img_full}}" class="superbox-current-img">
+    <img ng-src="{{entry.img_full}}" class="as-superbox-current-img">
 
-    <div class="superbox-close" ng-click="close()"></div>
+    <span class="glyphicon glyphicon-remove as-superbox-close" aria-hidden="true" ng-click="close()"></span>
 </div>

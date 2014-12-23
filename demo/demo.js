@@ -2,7 +2,7 @@
 
   var app = angular.module('superboxDemo', ['superbox']);
 
-  app.controller('SuperboxCtrl', ['$scope', function ($scope) {
+  app.controller('SuperboxCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
 
 
     function editEntry(entry) {
@@ -226,6 +226,19 @@
       }
     ];
 
+
+    $timeout(function () {
+      var newEntry = {
+        id: $scope.images.length + 1,
+        title: 'Camera',
+        description: dummyDesc,
+        alt: 'Alt',
+        img_thumb: 'img/superbox/superbox-thumb-1.jpg',
+        img_full: 'img/superbox/superbox-full-1.jpg'
+
+      };
+      $scope.images.push(newEntry);
+    }, 8000);
 
     $scope.actions = [
       {
