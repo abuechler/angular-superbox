@@ -2,7 +2,7 @@
   'use strict';
 
   var module = angular.module('superbox', []).run(['$anchorScroll', function ($anchorScroll) {
-    $anchorScroll.yOffset = 30;   // always scroll by 50 extra pixels
+    $anchorScroll.yOffset = 30;   // always scroll some extra pixels
   }]);
 
   module.directive('superbox', ['$location', '$anchorScroll', function ($location, $anchorScroll) {
