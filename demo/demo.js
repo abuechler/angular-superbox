@@ -13,12 +13,12 @@
       alert('Delete on ' + entry.title + ' invoked.');
     }
 
-    var dummyDesc = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
+    var dummyDesc = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invuuidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
 
     $scope.images = [
       {
-        id: 1,
-        title: 'Camera',
+        uuid: 1,
+        name: 'Camera',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-1.jpg',
@@ -26,8 +26,8 @@
 
       },
       {
-        id: 2,
-        title: 'Bridge',
+        uuid: 2,
+        name: 'Bridge',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-2.jpg',
@@ -35,8 +35,8 @@
 
       },
       {
-        id: 3,
-        title: 'Rails',
+        uuid: 3,
+        name: 'Rails',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-3.jpg',
@@ -44,8 +44,8 @@
 
       },
       {
-        id: 4,
-        title: 'Car',
+        uuid: 4,
+        name: 'Car',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-4.jpg',
@@ -53,8 +53,8 @@
 
       },
       {
-        id: 5,
-        title: 'Lamp',
+        uuid: 5,
+        name: 'Lamp',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-5.jpg',
@@ -62,8 +62,8 @@
 
       },
       {
-        id: 6,
-        title: 'Golden Gate',
+        uuid: 6,
+        name: 'Golden Gate',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-6.jpg',
@@ -71,8 +71,8 @@
 
       },
       {
-        id: 7,
-        title: 'Dancing',
+        uuid: 7,
+        name: 'Dancing',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-7.jpg',
@@ -80,8 +80,8 @@
 
       },
       {
-        id: 8,
-        title: 'Black & White',
+        uuid: 8,
+        name: 'Black & White',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-8.jpg',
@@ -89,8 +89,8 @@
 
       },
       {
-        id: 9,
-        title: 'Smoke',
+        uuid: 9,
+        name: 'Smoke',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-9.jpg',
@@ -98,8 +98,8 @@
 
       },
       {
-        id: 10,
-        title: 'Time',
+        uuid: 10,
+        name: 'Time',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-10.jpg',
@@ -107,8 +107,8 @@
 
       },
       {
-        id: 11,
-        title: 'Fashion',
+        uuid: 11,
+        name: 'Fashion',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-11.jpg',
@@ -116,8 +116,8 @@
 
       },
       {
-        id: 12,
-        title: 'Light',
+        uuid: 12,
+        name: 'Light',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-12.jpg',
@@ -125,8 +125,8 @@
 
       },
       {
-        id: 13,
-        title: 'Adventure',
+        uuid: 13,
+        name: 'Adventure',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-13.jpg',
@@ -134,8 +134,8 @@
 
       },
       {
-        id: 14,
-        title: 'Music',
+        uuid: 14,
+        name: 'Music',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-14.jpg',
@@ -143,8 +143,8 @@
 
       },
       {
-        id: 15,
-        title: 'Clock',
+        uuid: 15,
+        name: 'Clock',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-15.jpg',
@@ -152,8 +152,8 @@
 
       },
       {
-        id: 16,
-        title: 'Wild',
+        uuid: 16,
+        name: 'Wild',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-16.jpg',
@@ -161,64 +161,64 @@
 
       },
       {
-        id: 17,
-        title: 'Winter',
+        uuid: 17,
+        name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-17.jpg',
         img_full: 'img/superbox/superbox-full-17.jpg'
       },
       {
-        id: 18,
-        title: 'Winter',
+        uuid: 18,
+        name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-18.jpg',
         img_full: 'img/superbox/superbox-full-18.jpg'
       },
       {
-        id: 19,
-        title: 'Winter',
+        uuid: 19,
+        name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-19.jpg',
         img_full: 'img/superbox/superbox-full-19.jpg'
       },
       {
-        id: 20,
-        title: 'Winter',
+        uuid: 20,
+        name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-20.jpg',
         img_full: 'img/superbox/superbox-full-20.jpg'
       },
       {
-        id: 21,
-        title: 'Winter',
+        uuid: 21,
+        name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-21.jpg',
         img_full: 'img/superbox/superbox-full-21.jpg'
       },
       {
-        id: 22,
-        title: 'Winter',
+        uuid: 22,
+        name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-22.jpg',
         img_full: 'img/superbox/superbox-full-22.jpg'
       },
       {
-        id: 23,
-        title: 'Winter',
+        uuid: 23,
+        name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-23.jpg',
         img_full: 'img/superbox/superbox-full-23.jpg'
       },
       {
-        id: 24,
-        title: 'Winter',
+        uuid: 24,
+        name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-24.jpg',
@@ -229,8 +229,8 @@
 
     $timeout(function () {
       var newEntry = {
-        id: $scope.images.length + 1,
-        title: 'Camera',
+        uuid: $scope.images.length + 1,
+        name: 'Camera',
         description: dummyDesc,
         alt: 'Alt',
         img_thumb: 'img/superbox/superbox-thumb-1.jpg',

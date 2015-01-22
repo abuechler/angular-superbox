@@ -12,9 +12,19 @@
       restrict: 'E',
       scope: {
         superboxModel: '=',
-        superboxActions: '='
+        superboxActions: '=',
+        superboxOptions: '=?'
       },
       link: function (scope) {
+
+        // Mapping model fields if necessary...
+        if(scope.superboxOptions && scope.superboxOptions.fields){
+          Object.getOwnPropertyNames(scope.superboxOptions.fields).forEach(function(val) {
+            angular.forEach(scope.superboxModel, function(entry){
+              entry[val] = entry[scope.superboxOptions.fields[val]];
+            });
+          });
+        }
 
         scope._currentEntry = null;
 

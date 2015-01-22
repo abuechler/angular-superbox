@@ -16,12 +16,24 @@
     margin: 25px auto;
 }
 
+.as-superbox *, .as-superbox :after, .as-superbox :before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility
+}
+
 .as-superbox-list {
     display: inline-block;
     zoom: 1;
     width: 12.5%;
-    margin: 0px;
-    padding: 0px;
+    padding: 5px;
     position: relative
 }
 
@@ -35,12 +47,11 @@
     text-align: left;
     position: relative;
     background-color: #222;
-    width: inherit;
+    width: 90%;
     float: left;
     padding: 25px 0 12px 25px;
-    display: none;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    display: inline-block;
+    margin: 5px 0px 0px 0px;
 }
 
 .as-superbox-current-img {
@@ -51,7 +62,7 @@
 }
 
 .as-superbox-img:hover {
-    opacity: .6
+    opacity: .8
 }
 
 .as-superbox-float {
@@ -59,14 +70,12 @@
 }
 
 .as-superbox-close {
-    opacity: 0.7;
+    opacity: .7;
     cursor: pointer;
     position: absolute;
-    top: 25px;
-    right: 25px;
-    color: white;
-    width: 35px;
-    height: 35px;
+    top: 15px;
+    right: 15px;
+    transition: all .1s linear 0s
 }
 
 .as-superbox-close:hover {
@@ -112,7 +121,7 @@
 
 @media only screen and (min-width: 768px) {
     .as-superbox-list {
-        width: 16.6%
+        width: 16.66666667%
     }
 }
 
