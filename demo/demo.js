@@ -17,7 +17,6 @@
 
     $scope.images = [
       {
-        uuid: 1,
         name: 'Camera',
         description: dummyDesc,
         alt: 'Alt',
@@ -26,7 +25,6 @@
 
       },
       {
-        uuid: 2,
         name: 'Bridge',
         description: dummyDesc,
         alt: 'Alt',
@@ -35,7 +33,6 @@
 
       },
       {
-        uuid: 3,
         name: 'Rails',
         description: dummyDesc,
         alt: 'Alt',
@@ -44,7 +41,6 @@
 
       },
       {
-        uuid: 4,
         name: 'Car',
         description: dummyDesc,
         alt: 'Alt',
@@ -53,7 +49,6 @@
 
       },
       {
-        uuid: 5,
         name: 'Lamp',
         description: dummyDesc,
         alt: 'Alt',
@@ -62,7 +57,6 @@
 
       },
       {
-        uuid: 6,
         name: 'Golden Gate',
         description: dummyDesc,
         alt: 'Alt',
@@ -71,7 +65,6 @@
 
       },
       {
-        uuid: 7,
         name: 'Dancing',
         description: dummyDesc,
         alt: 'Alt',
@@ -80,7 +73,6 @@
 
       },
       {
-        uuid: 8,
         name: 'Black & White',
         description: dummyDesc,
         alt: 'Alt',
@@ -89,7 +81,6 @@
 
       },
       {
-        uuid: 9,
         name: 'Smoke',
         description: dummyDesc,
         alt: 'Alt',
@@ -98,7 +89,6 @@
 
       },
       {
-        uuid: 10,
         name: 'Time',
         description: dummyDesc,
         alt: 'Alt',
@@ -107,7 +97,6 @@
 
       },
       {
-        uuid: 11,
         name: 'Fashion',
         description: dummyDesc,
         alt: 'Alt',
@@ -116,7 +105,6 @@
 
       },
       {
-        uuid: 12,
         name: 'Light',
         description: dummyDesc,
         alt: 'Alt',
@@ -125,7 +113,6 @@
 
       },
       {
-        uuid: 13,
         name: 'Adventure',
         description: dummyDesc,
         alt: 'Alt',
@@ -134,7 +121,6 @@
 
       },
       {
-        uuid: 14,
         name: 'Music',
         description: dummyDesc,
         alt: 'Alt',
@@ -143,7 +129,6 @@
 
       },
       {
-        uuid: 15,
         name: 'Clock',
         description: dummyDesc,
         alt: 'Alt',
@@ -152,7 +137,6 @@
 
       },
       {
-        uuid: 16,
         name: 'Wild',
         description: dummyDesc,
         alt: 'Alt',
@@ -161,7 +145,6 @@
 
       },
       {
-        uuid: 17,
         name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
@@ -169,7 +152,6 @@
         img_full: 'img/superbox/superbox-full-17.jpg'
       },
       {
-        uuid: 18,
         name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
@@ -177,7 +159,6 @@
         img_full: 'img/superbox/superbox-full-18.jpg'
       },
       {
-        uuid: 19,
         name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
@@ -185,7 +166,6 @@
         img_full: 'img/superbox/superbox-full-19.jpg'
       },
       {
-        uuid: 20,
         name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
@@ -193,7 +173,6 @@
         img_full: 'img/superbox/superbox-full-20.jpg'
       },
       {
-        uuid: 21,
         name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
@@ -201,7 +180,6 @@
         img_full: 'img/superbox/superbox-full-21.jpg'
       },
       {
-        uuid: 22,
         name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
@@ -209,7 +187,6 @@
         img_full: 'img/superbox/superbox-full-22.jpg'
       },
       {
-        uuid: 23,
         name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
@@ -217,7 +194,6 @@
         img_full: 'img/superbox/superbox-full-23.jpg'
       },
       {
-        uuid: 24,
         name: 'Winter',
         description: dummyDesc,
         alt: 'Alt',
@@ -253,6 +229,4 @@
 
   }]);
 
-
-  console.log('Done');
 }());
