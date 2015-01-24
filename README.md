@@ -11,8 +11,7 @@ AngularJS version of Superbox. You can find a demo [here](http://plnkr.co/edit/E
 ### Basic Usage
 
 ``` html
-<superbox superbox-model="images">
-</superbox>
+<superbox superbox-model="images"></superbox>
 ```
 
 The superbox-model attribute takes an array of objects with following properties:
@@ -42,7 +41,10 @@ The superbox-model attribute takes an array of objects with following properties
 If your data model is different, let's say instead of an image.title you have image.name, you can provide your own field mapping:
 
 ``` html
-<superbox superbox-model="images" superbox-actions="actions" superbox-options="{fieldMapping: {title: 'name', description: 'desc'}}"></superbox>
+<superbox superbox-model="images" 
+          superbox-actions="actions" 
+          superbox-options="{fieldMapping: {title: 'name', description: 'desc'}}">
+</superbox>
 ```
 
 ##### Actions
