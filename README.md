@@ -3,7 +3,7 @@ Angular-Superbox
 
 <!-- [![Build Status][travis-status]][travis-link] -->
 
-AngularJS version of Superbox.
+AngularJS version of Superbox. You can find a demo [here](http://plnkr.co/edit/En92cV?p=preview).
 
 ![thumbnail](doc/img/angular-superbox-800x644.png)
 
