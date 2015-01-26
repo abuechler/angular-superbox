@@ -7,6 +7,13 @@ AngularJS version of Superbox. You can find a demo [here](http://plnkr.co/edit/E
 
 ![thumbnail](doc/img/angular-superbox-800x644.png)
 
+### Installation
+
+There's a [bower](http://bower.io/) package:
+
+``` shell
+bower install angular-superbox
+```
 
 ### Basic Usage
 
