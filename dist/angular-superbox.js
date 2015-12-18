@@ -32,10 +32,32 @@
           }
         }
 
+		var indexByObj = function(array, obj) {
+			for (var i = 0; i < array.length; i++){
+				if (array[i].id === obj.id)
+					return i;
+			}
+		}
+		
         scope._currentEntry = null;
 
         scope.currentEntry = function (entry) {
           if (arguments.length === 1) {
+			  
+			if (entry !== "undefined") {
+        		
+        		var idxSuperBoxModel = indexByObj(scope.superboxModel, entry);
+
+        		if (scope.superboxModel[idxSuperBoxModel].img_full_real === undefined) {
+        			var img = new Image();
+        			img.src = entry.img_full;
+        			img.onload = function() {
+        				$anchorScroll();			
+        			};
+        			scope.superboxModel[idxSuperBoxModel].img_full_real = entry.img_full;
+        		}
+        	}
+			
             scope._currentEntry = entry;
             $location.hash('superbox-show-' + entry.id);
             $anchorScroll();
@@ -106,7 +128,7 @@ angular.module('superbox').run(['$templateCache', function($templateCache) {
     "           </button>\n" +
     "        </span>\n" +
     "    </div>\n" +
-    "    <img ng-src=\"{{entry.img_full}}\" class=\"as-superbox-current-img\">\n" +
+    "    <img ng-src=\"{{entry.img_full_real}}\" class=\"as-superbox-current-img\">\n" +
     "\n" +
     "    <span class=\"glyphicon glyphicon-remove as-superbox-close\" aria-hidden=\"true\" ng-click=\"close()\"></span>\n" +
     "</div>"
