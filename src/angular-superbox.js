@@ -26,18 +26,12 @@
           });
         }
 
-        for (var i = 0; i < scope.superboxModel.length; i++) {
-          if (!scope.superboxModel[i].id) {
-            scope.superboxModel[i].id = i;
-          }
-        }
-
-		var indexByObj = function(array, obj) {
-			for (var i = 0; i < array.length; i++){
-				if (array[i].id === obj.id)
-					return i;
-			}
+        var indexByObj = function(array, obj) {
+		for (var i = 0; i < array.length; i++){
+			if (angular.equals(array[i], obj))
+				return i;
 		}
+	}
 		
         scope._currentEntry = null;
 
